@@ -55,7 +55,7 @@ function _update()
 	end
 	
 	if score==20 and finish_time==nil then
-		finish_time=time()
+		finish_time=flr(time())
 		game_over=true
 	end
 end
@@ -74,7 +74,7 @@ function _draw()
 -- win sequence
 	if game_over==true then
 		print('you win!',32,48,9)
-		print('it took you '..finish_time..'seconds',32,54,9)
+		print('it took you '..finish_time..' seconds',32,54,9)
 	else
 		print('time: '..flr(time()),40,1,9)
 	end
